@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 /**
  * Write a description of class MatrixMathDriver here.
  *
@@ -18,7 +18,7 @@ public class MatrixMathDriver
 		/* TODO
 		 * Use Arrays.toString on the results below
 		 */
-        mathA.rowSum();
+        System.out.println(Arrays.toString(mathA.rowSum()));
         mathA.rowAve();
         mathA.colSum();
         mathA.colAve();
