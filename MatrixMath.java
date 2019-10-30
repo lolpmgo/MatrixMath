@@ -16,7 +16,7 @@ public class MatrixMath
     public MatrixMath(int[][] data)
     {
         // initialise instance variables
-       
+        this.data = data;
     }
 
     /**
@@ -28,18 +28,18 @@ public class MatrixMath
     public int[] rowSum()
     {
         int sum = 0;
-        int rowtotal [][] = new int[0][2];
+        int[] sumRow = new int[data.length];
         for (int i = 0; i < data.length; i++)
         {
             sum = 0;
-            for (int j = 0; j < data[i].length; i++)
+            for (int j = 0; j < data[i].length; j++)
             {
                  sum += data[i][j];
-                 rowtotal[i][j] = sum;
+                 sumRow[i] = sum;
+                 
             }
-            
         }
-        return rowtotal;
+        return sumRow;
     }
     
         /**
@@ -49,7 +49,11 @@ public class MatrixMath
      */
     public double[] rowAve()
     {
-        return null;
+        double[] aveRow = new double[data.length];
+        int[] rowSums = rowSum();
+        for (int i = 0; i < data.length; i ++)
+            aveRow[i] = (rowSums[i] * 1.0)/data[i].length;
+        return aveRow;
     }
     
         /**
@@ -60,7 +64,19 @@ public class MatrixMath
      */
     public int[] colSum()
     {
-        return null;
+        int[] sumCol = new int[data[0].length];
+        for (int j = 0; j < data[0].length; j++)
+        {
+            int sum = 0;
+            for (int i = 0; i < data.length; i++)
+            {
+                 sum += data[i][j];
+                 sumCol[j] = sum;
+                 
+            }
+        }
+        
+        return sumCol;
     }
     
      /**
@@ -70,7 +86,11 @@ public class MatrixMath
      */
     public double[] colAve()
     {
-        return null;
+        double [] aveCol = new double[data[0].length];
+        int[] colSums = colSum();
+        for(int i = 0; i < data[0].length; i ++)
+            aveCol[i] = (colSums[i] * 1.0)/data.length;
+        return aveCol;
     }
     
 }

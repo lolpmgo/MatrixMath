@@ -19,14 +19,21 @@ public class MatrixMathDriver
 		 * Use Arrays.toString on the results below
 		 */
         System.out.println(Arrays.toString(mathA.rowSum()));
-        mathA.rowAve();
-        mathA.colSum();
-        mathA.colAve();
+        //mathA.rowAve();
+        System.out.println(Arrays.toString(mathA.rowAve()));
+        //mathA.colSum();
+        System.out.println(Arrays.toString(mathA.colSum()));
+        //mathA.colAve();
+        System.out.println(Arrays.toString(mathA.colAve()));
         
         MatrixMath mathB = new MatrixMath(B);
-        mathB.rowSum();
-        mathB.rowAve();
-        mathB.colSum();
-        mathB.colAve();
+        //mathB.rowSum();
+        System.out.println(Arrays.toString(mathB.rowSum()));
+        //mathB.rowAve();
+        System.out.println(Arrays.toString(mathB.rowAve()));
+        //mathB.colSum();
+        System.out.println(Arrays.toString(mathB.colSum()));
+        //mathB.colAve();
+        System.out.println(Arrays.toString(mathB.colAve()));    
     }
 }
